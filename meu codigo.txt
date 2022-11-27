@@ -1,0 +1,65 @@
+Algoritmo "passageiros"
+
+Var
+   totPassageiro,gratuidade, pagante, matricula, roleta, turno, x, z : inteiro
+   totArrecadado : Real
+   dataInicial, dataFinal, horasTrabalhadas : Inteiro
+   arrecadado: Real
+   passageiros : vetor[1..5] de Inteiro
+   cont : Inteiro
+Inicio
+   Escreval ("Digite o turno: ")
+   Leia (turno)
+   Escreval ("Digite a matricula: ")
+   Leia (matricula)
+   Escreval ("Digite a data inicial: ")
+   Leia (dataInicial)
+
+   Escreval ("Digite a data final: ")
+   Leia (dataFinal)
+
+   Escreval ("Quantos passageiros foi no dia")
+
+   leia (z)
+   Limpatela
+
+   Para x de 1 ate z faca
+      Escreval ("Quantos passageiros foi? ")
+      Escreval ("1 - pagante")
+      Escreval ("2 - gratuidade")
+
+      Leia (roleta)
+      escolha (roleta)
+
+    caso 1
+         pagante <- pagante + 1
+
+      caso 2
+         gratuidade <- gratuidade + 1
+
+      caso 3
+         matricula <- matricula + 1
+
+      caso 4
+         turno <- turno + 1
+      Fimescolha
+   Fimpara
+   Escreval ("Digite turno: ", turno)
+   Escreval ("Digite matricula: ", matricula)
+   Escreval ("Digite dataInicial: ", dataInicial)
+   Escreval ("Digite dataFinal: ", dataFinal)
+
+   Escreval ("Digite pagante: ", pagante)
+   totArrecadado <- pagante * 4.45
+   Escreval ("Digite gratuidade: ", gratuidade)
+   Escreval ("O valor arrecadado foi ","R$", totArrecadado:1:2)
+
+caso 5
+Escreva ("Digite horasTrabalhada: ")
+    Leia (horasTrabalhadas)
+Se horasTrabalhadas <10 entao
+      escrevaL ("Nao tem adicional")
+   senao
+      escrevaL ("Tem adicional")
+Fimse
+Fimalgoritmo
